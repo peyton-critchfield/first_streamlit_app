@@ -1,7 +1,3 @@
-import logging
-
-logging.debug('This will get logged')
-
 import streamlit
 
 streamlit.title('My parents new healthy diner')
