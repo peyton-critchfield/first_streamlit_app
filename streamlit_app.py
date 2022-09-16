@@ -22,7 +22,7 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response.json())
 
-# write your own comment -what does the next line do? 
-fruityvice_normalized = (fruityvice_response.json())
-# write your own comment - what does this do?
+# normalizes semi-structured JSON data into a flat table
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# displays normalized data
 streamlit.dataframe(fruityvice_normalized)
